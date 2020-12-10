@@ -26,12 +26,9 @@ def run_model() -> None:
 
     # rebalance_window is the number of months to retrain the model
     # validation_window is the number of months to validation the model and select for trading
-    rebalance_window = 126
-    validation_window = 126
 
     ## Ensemble Strategy
-    run_ensemble_strategy(df=data, unique_trade_date=unique_trade_date, rebalance_window=rebalance_window,
-                          validation_window=validation_window)
+    run_ensemble_strategy(data, unique_trade_date)
 
 
 if __name__ == "__main__":
